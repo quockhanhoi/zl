@@ -1,0 +1,51 @@
+{
+  "bot": {
+    "prefix": "-",
+    "debug": true,
+    "test_mode": true,
+    "remove_bg_key": "",
+    "genius_token": "GzY-Nde2yQEhiWy06x94fbC6_nJaSTQ5HXfc1DiC8X5jRJqLtadSinOgTuJ3nG7C"
+  },
+  "credentials": {
+    "cookies": "zpdid=41Jxa5BugJSJ5P6OKVV3Dn8JbfXLzCap; zlogin_session=kW4JGLyjCnIxFnDDLXTbH-Tj1a9M5cD0vsaRKWvKRLYiA1TT64joMgye7rCYVG; _zlang=vn; zpsid=oVbO.453157847.32.7htc9x7zxBTcNkwilVtijyIEdeE4pjs2XiNOWB3BNTJbUNk4iDuyUTZzxBS; __zi=3000.QOBlzDCV2uGerkFzm0LJqcNNuVR51nZRPjUeziG17zbarQBp.1; zlogtype=EXPIRED; zpsid=eMKnVcAlVqAZUYmFPAHw7-WgSKzxfNWKxIXeH7wy1KwMIKzzTxK1VvaxLrzLr0rHg2jxPrheAJFECL4M5kO9Hk8hP4DuvmnFY6fhNaYZD5kVA5DdMDGTPKi; __zi=3000.QOBlzDCV2uGerkFzm0LJqcNNuVR51nZRPjUeziG17zbaqgdz.1; zpw_sek=ojLd.453157847.a0.mpZG2YPoUoJnqNa_1t9x95rG7ay4I5bpKZbDIaX1CrTHDK9KSa0XQcSrBb1HJqO6MtDDbKKc_xCLSr_qw1jx90; app.event.zalo.me=7713100542915103875",
+    "imei": "a3a30244-5f0a-45d1-9ce9-07a1bcd0f9ae-33d0f257a817d1ca4c4381b87f8ad83f",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+  },
+  "user_info": {
+    "name": "Hoàng Thị Mẫn Nhi",
+    "avatar": "https://s120-ava-talk.zadn.vn/1/b/f/4/1/120/59d72095f0601058fbba50ad38aa9e07.jpg"
+  },
+  "admin": {
+    "ids": [
+      "6507497158633565458"
+    ]
+  },
+  "commands": {
+    "enabled": true,
+    "default_commands": [
+      "help",
+      "ping",
+      "hello",
+      "info",
+      "admin"
+    ]
+  },
+  "plugins": {
+    "enabled": true,
+    "auto_load": [
+      "weather",
+      "joke",
+      "calculator"
+    ]
+  },
+  "events": {
+    "enabled": true,
+    "handlers": [
+      "auto_reply"
+    ]
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "[%(asctime)s] [%(name)s] [%(levelname)s] %(message)s"
+  }
+}

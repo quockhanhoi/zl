@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+message MajorLoginReq {
+    string openid = 22;
+    string logintoken = 29;
+    string platform = 99;
+}
+
+message MajorLoginResp {
+    string token = 8;
+    string serverUrl = 10;
+}
+
+message ShowReq {
+    uint64 accountId = 1;
+    uint32 callSignSrc = 2;
+}
+
+message ShowResp {
+    bytes basicinfo = 1;      // AccountInfoBasic
+    bytes profileinfo = 2;    // AvatarProfile
+    bytes clanbasicinfo = 6;  // ClanInfoBasic
+    bytes petinfo = 8;        // PetInfo
+    bytes socialinfo = 9;      // SocialBasicInfo
+    bytes diamondcostres = 10;
+    bytes creditscoreinfo = 11;
+}
+
+message SearchReq {
+    string keyword = 1;
+}
+
+message SearchResp {
+    repeated bytes infos = 1;
+}
+
+message StatsReq {
+    uint64 accountid = 1;
+    uint32 matchmode = 2;
+}
+
+message StatsResp {
+    bytes solostats = 1;
+    bytes duostats = 2;
+    bytes quadstats = 3;
+}
+
+message CSReq {
+    uint64 accountid = 1;
+    uint32 gamemode = 2;
+    uint32 matchmode = 3;
+}
+
+message CSResp {
+    bytes csstats = 1;
+}

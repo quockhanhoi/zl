@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zalo Bot Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="logo.png" alt="DGK Logo" style="width: 40px; height: 40px; border-radius: 8px;">
+            <span>DGK Bot</span>
+        </div>
+        <nav>
+            <a href="#dashboard" class="active"><i class="fas fa-th-large"></i> Dashboard</a>
+            <a href="#commands"><i class="fas fa-code"></i> Lệnh Bot</a>
+            <a href="#groups"><i class="fas fa-users"></i> Nhóm</a>
+            <a href="#admins"><i class="fas fa-user-shield"></i> Admin</a>
+            <a href="#settings"><i class="fas fa-cog"></i> Cài đặt</a>
+        </nav>
+        <div class="status-indicator">
+            <div class="dot online"></div>
+            <span>Bot Online</span>
+        </div>
+    </div>
+
+    <main>
+        <header>
+            <h1>Hệ thống Quản lý Bot</h1>
+            <div class="controls">
+                <button id="btn-restart" class="btn btn-warning"><i class="fas fa-sync"></i> Restart</button>
+                <button id="btn-shutdown" class="btn btn-danger"><i class="fas fa-power-off"></i> Tắt Bot</button>
+            </div>
+            <div class="user-info">
+                <span id="bot-prefix">Prefix: -</span>
+                <div class="avatar" id="main-avatar"></div>
+            </div>
+        </header>
+
+        <section id="dashboard" class="page active">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="icon"><i class="fas fa-clock"></i></div>
+                    <div class="info">
+                        <span class="label">Uptime</span>
+                        <h2 id="uptime">-</h2>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="icon"><i class="fas fa-memory"></i></div>
+                    <div class="info">
+                        <span class="label">Memory Usage</span>
+                        <h2 id="memory">-</h2>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="icon"><i class="fas fa-terminal"></i></div>
+                    <div class="info">
+                        <span class="label">Lệnh hoạt động</span>
+                        <h2 id="total-commands">-</h2>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="icon"><i class="fas fa-cubes"></i></div>
+                    <div class="info">
+                        <span class="label">Modules</span>
+                        <h2 id="total-modules">-</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recent-activity">
+                <h3>Hoạt động gần đây</h3>
+                <div class="activity-list" id="activity-log">
+                    <div class="log-item">Hệ thống đã khởi động thành công.</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="commands" class="page">
+            <h3>Danh sách Lệnh Bot</h3>
+            <div class="command-grid" id="command-list">
+                <!-- Commands injected by JS -->
+            </div>
+        </section>
+
+        <section id="groups" class="page">
+            <h3>Danh sách Nhóm</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tên Nhóm</th>
+                            <th>ID</th>
+                            <th>Thành viên</th>
+                            <th>Trạng thái Thuê</th>
+                            <th>Hết hạn</th>
+                        </tr>
+                    </thead>
+                    <tbody id="group-list">
+                        <!-- Groups injected by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="admins" class="page">
+            <h3>Đội ngũ Quản trị</h3>
+            <div class="admin-grid" id="admin-list">
+                <!-- Admins injected by JS -->
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
