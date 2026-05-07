@@ -32,7 +32,7 @@ function startBot() {
 
     bot.on("error", (err) => {
         console.error("[RENDER] Lỗi khởi động bot:", err.message);
-        setTimeout(startBot, 3000);
+        setTimeout(startBot, 10000);
     });
 }
 
